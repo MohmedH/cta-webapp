@@ -1,0 +1,87 @@
+@page
+@model EtaInfoModel
+@{
+  ViewData["Title"] = "Live Train Times";
+}
+
+<h2>Live Train Times</h2>  
+
+<br />
+Your search string: "@Model.Input"
+<br />
+# of trains found: @Model.TrainList.Count
+<br />
+<br />
+@{
+   if (@Model.EX != null)
+	 {
+		 <h3>**Sorry, couldn't find any times for that location**</h3>
+         <h5>1. Make sure station entered is correct</h5>
+         <h5>2. There are no trains coming to this stop at the moment</h5>
+		 <br />
+		 <hr />
+		 <br />
+		 <br />
+	 }
+}
+
+<table class="table">  
+    <thead>  
+        <tr>   
+            <th>  
+                StationID
+            </th>  
+			<th>  
+                Currently Here
+            </th>  
+            <th>  
+                Direction
+            </th>
+             <th>  
+                Line (Color)
+            </th>
+             <th>  
+                ETA Arrival  
+            </th>
+             <th>  
+                Arriving in (Minutes)
+            </th>
+        </tr>  
+    </thead>  
+    <tbody>  
+        @foreach (var item in Model.TrainList)  
+        {  
+            <tr>  
+                <td>  
+					@item.stationID
+                </td>  
+                <td>  
+                    @item.stationName
+                </td> 
+				<td>  
+                    @item.stopDestination
+                </td>
+                 <td>  
+                    @item.routeColor
+                </td>
+                <td>  
+					@item.arrivalT
+                </td>
+                
+                @if(item.difference.TotalMinutes >= 2)
+                {
+                    <td>
+                        @item.difference.TotalMinutes Minutes
+                    </td>
+                }else
+                {
+                   <td>
+                        @item.difference.TotalMinutes Minute (Arriving Soon!)
+                    </td>
+                }
+                            
+
+            </tr>  
+        }  
+    </tbody>  
+</table> 

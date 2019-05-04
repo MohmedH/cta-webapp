@@ -1,0 +1,25 @@
+@page
+@model GetStopInputModel
+@{
+  ViewData["Title"] = "Get Stop Input";
+}
+
+<div class="container">  
+    <h2>Which stop(s) are you interested in?</h2>  
+    <hr />  
+    <br />  
+	<form action="StopInfo" method="get">
+				
+        <div class="row">  
+            <div class="col-md-4">  
+                <label asp-for="Input">Enter Station number:</label>  
+                <input asp-for="Input" class="form-control" />  
+            </div>  
+        </div>   
+				
+        <br />  
+        <input type="submit" value="Lookup" class="btn btn-primary" />  
+        <a class="btn btn-default" href="/">Cancel</a>  
+				
+    </form>
+</div>
