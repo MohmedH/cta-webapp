@@ -13,7 +13,7 @@ Your search string: "@Model.Input"
 <br />
 <br />
 @{
-   if (@Model.EX != null)
+   if (@Model.EX != null && @Model.TrainList.Count == 0)
 	 {
 		 <h3>**Sorry, couldn't find any times for that location**</h3>
          <h5>1. Make sure station entered is correct</h5>
