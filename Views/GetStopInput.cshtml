@@ -5,15 +5,15 @@
 }
 
 <div class="container">
-    <h2>Which stop(s) are you interested in? (StationID required)</h2>
-    <h3>If you do not know the StationID, please use Station Info page to get the StationID.</h3>
+    <h2>Which stop(s) are you interested in?</h2>
+    <h4>If you do not know the StationID, please use Station Info page to get the StationID.</h4>
     <hr />
     <br />
     <form action="StopInfo" method="get">
 
         <div class="row">
             <div class="col-md-4">
-                <label asp-for="Input">Enter Station number:</label>
+                <label asp-for="Input">Enter StationID number:</label>
                 <input asp-for="Input" class="form-control" />
             </div>
         </div>
