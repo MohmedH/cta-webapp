@@ -11822,11 +11822,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Hira/Desktop/project07/cta-web/program.csproj",
+      "projectUniqueName": "/Users/Hira/Desktop/cta-webapp/program.csproj",
       "projectName": "program",
-      "projectPath": "/Users/Hira/Desktop/project07/cta-web/program.csproj",
+      "projectPath": "/Users/Hira/Desktop/cta-webapp/program.csproj",
       "packagesPath": "/Users/Hira/.nuget/packages/",
-      "outputPath": "/Users/Hira/Desktop/project07/cta-web/obj",
+      "outputPath": "/Users/Hira/Desktop/cta-webapp/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
