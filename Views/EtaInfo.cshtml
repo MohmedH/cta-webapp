@@ -54,25 +54,25 @@ Your search string: "@Model.Input"
         @foreach (var item in Model.TrainList)  
         {  
             <tr id=@item.routeColor>  
-                <td id=@item.routeColor>  
+                <td style="background-color: white; color: black">  
 					@item.stationID
                 </td>  
-                <td id=@item.routeColor>  
+                <td>  
                     @item.stationName
                 </td> 
-				<td id=@item.routeColor>  
+				<td>  
                     @item.stopDestination
                 </td>
-                 <td id=@item.routeColor>  
+                 <td>  
                     @item.routeColor
                 </td>
-                <td id=@item.routeColor>  
+                <td>  
 					@item.arrivalT
                 </td>
                 
                 @if(item.difference.TotalMinutes >= 2)
                 {
-                    <td id=@item.routeColor>
+                    <td>
                         @item.difference.TotalMinutes Minutes
                     </td>
                 }else

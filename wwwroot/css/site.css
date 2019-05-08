@@ -36,52 +36,48 @@ body {
     }
 }
 
-
 #Red {
     background-color: red;
     color: white;
 }
 
-  #Blue {
-
+#Blue {
     background-color: blue;
     color: white;
-    
 }
 
- #Brn {
-
+#Brn {
     background-color: #74210F;
     color: white;
 }
 
 #G {
-
     background-color: green;
     color: white;
 }
 
 #Org {
-
     background-color: orange;
     color: black;
-
 }
 
 #P {
-
     background-color: purple;
     color: white;
 }
 
 #Pink {
-
     background-color: #FB0094;
     color: white;
 }
 
 #Y {
-
     background-color: yellow;
     color: black;
 }
+
+
+
+
+
+
