@@ -4,6 +4,8 @@
   ViewData["Title"] = "Live Train Times";
 }
 
+<link rel="stylesheet" href="/css/site.css">
+
 <h2>Live Train Times</h2>  
 
 <br />
@@ -51,31 +53,31 @@ Your search string: "@Model.Input"
     <tbody>  
         @foreach (var item in Model.TrainList)  
         {  
-            <tr>  
-                <td>  
+            <tr id=@item.routeColor>  
+                <td id=@item.routeColor>  
 					@item.stationID
                 </td>  
-                <td>  
+                <td id=@item.routeColor>  
                     @item.stationName
                 </td> 
-				<td>  
+				<td id=@item.routeColor>  
                     @item.stopDestination
                 </td>
-                 <td>  
+                 <td id=@item.routeColor>  
                     @item.routeColor
                 </td>
-                <td>  
+                <td id=@item.routeColor>  
 					@item.arrivalT
                 </td>
                 
                 @if(item.difference.TotalMinutes >= 2)
                 {
-                    <td>
+                    <td id=@item.routeColor>
                         @item.difference.TotalMinutes Minutes
                     </td>
                 }else
                 {
-                   <td>
+                   <td style="background-color: white; color: black">
                         @item.difference.TotalMinutes Minute (Arriving Soon!)
                     </td>
                 }
